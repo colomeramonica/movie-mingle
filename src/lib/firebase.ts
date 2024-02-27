@@ -1,14 +1,17 @@
 import 'firebase/auth'
 import { initializeApp } from 'firebase/app'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAJACywKruv7oCTYFccGyB2XwrRzdqqY0U',
-  authDomain: 'movie-mingle-58b82.firebaseapp.com',
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
   databaseURL: 'https://movie-mingle-58b82-default-rtdb.firebaseio.com',
   projectId: 'movie-mingle-58b82',
-  storageBucket: 'movie-mingle-58b82.appspot.com',
-  messagingSenderId: '1020652618276',
-  appId: '1:1020652618276:web:f6f4091c486b03b9aa0eb1',
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
   measurementId: 'G-T603MNFFTB',
 }
 export const firebaseApp = initializeApp(firebaseConfig)
