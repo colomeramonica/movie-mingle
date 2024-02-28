@@ -65,4 +65,5 @@ dist/
 
 # vscode config files
 .history/
+.vscode/
 
