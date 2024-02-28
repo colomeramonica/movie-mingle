@@ -8,4 +8,16 @@ export class UserRepository {
       },
     })
   }
+
+  public async getUserProfile(id: string) {
+    const userId = parseInt(id, 10)
+    return await databaseConn.user.findUniqueOrThrow({
+      where: {
+        id: userId,
+      },
+      include: {
+        review: true,
+      },
+    })
+  }
 }
