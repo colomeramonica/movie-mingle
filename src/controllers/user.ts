@@ -37,6 +37,16 @@ export class UserController {
 
   public async updateUserProfile(req: Request, res: Response) {}
 
+  public async getUserProfile(req: Request, res: Response) {
+    const { userId } = req.params
+    try {
+      const userProfile = await userRepository.getUserProfile(userId)
+      res.json(userProfile)
+    } catch (error) {
+      res.json(error)
+    }
+  }
+
   public async resetPassword(req: Request, res: Response) {
     const auth = getAuth(firebaseApp)
     const { email } = req.body
