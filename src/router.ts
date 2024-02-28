@@ -28,4 +28,8 @@ router.get('/reviews', async (req: Request, res: Response) => {
   return await reviewController.getFilteredReviews(req, res)
 })
 
+router.post('/review/new', async (req: Request, res: Response) => {
+  return await reviewController.createNewReview(req, res)
+})
+
 export default router

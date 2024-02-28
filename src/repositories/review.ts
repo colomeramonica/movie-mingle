@@ -1,6 +1,27 @@
 import { databaseConn } from '@src/lib/prisma'
 
 export class ReviewRepository {
+  public async createNewReview(
+    userId: number,
+    data: {
+      rating: number
+      review: string
+    },
+    filmId?: string,
+    showId?: string,
+  ) {
+    return await databaseConn.review.create({
+      data: {
+        filmId,
+        showId,
+        rating: data.rating,
+        review: data.review,
+        user: {
+          connect: { id: userId },
+        },
+      },
+    })
+  }
   public async getFilteredReviews(
     filter: {
       userId?: number
@@ -10,7 +31,6 @@ export class ReviewRepository {
       reviewAt?: Date
     } = {},
   ) {
-    console.log('repo', filter)
     return await databaseConn.review.findMany({
       where: {
         userId: filter.userId,
