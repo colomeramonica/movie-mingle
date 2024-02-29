@@ -3,6 +3,15 @@ import { ReviewRepository } from '@src/repositories/review'
 
 const reviewRepository = new ReviewRepository()
 export class ReviewController {
+  /**
+  * Creates a new review for the given user.
+  *
+  * @param userId - the ID of the user who wrote the review
+  * @param data - the review data, including the rating and review text
+  * @param movieId - the ID of the movie, if the review is for a movie
+  * @param showId - the ID of the show, if the review is for a show
+  * @returns the newly created review
+  */
   public async createNewReview(req: Request, res: Response) {
     const { mediaId, mediaType, userId, data } = req.body
     const movieId = mediaType.includes('movie') ? mediaId : undefined

@@ -1,4 +1,4 @@
-import { databaseConn } from '@src/lib/prisma'
+import { databaseConn } from '@src/util/prisma'
 export class UserRepository {
   public async saveUserInfo(data: { username: string; uid: string }) {
     return await databaseConn.user.create({

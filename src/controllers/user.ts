@@ -1,5 +1,5 @@
 import { Response, Request } from 'express'
-import { firebaseApp } from '../lib/firebase'
+import { firebaseApp } from '../util/firebase'
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -10,7 +10,7 @@ import { UserRepository } from '../repositories/user'
 
 const userRepository = new UserRepository()
 
-export class UserController {
+export class UserController extends BaseController {
   public async createUser(req: Request, res: Response) {
     const auth = getAuth(firebaseApp)
     const { username, email, password } = req.body
@@ -24,11 +24,11 @@ export class UserController {
       const { uid } = user
 
       const userData = { username, uid }
-      userRepository.saveUserInfo(userData)
+      const userInfo = userRepository.saveUserInfo(userData)
 
       sendEmailVerification(user)
 
-      return res.status(204).json('✨Created')
+      return res.status(204).json(`✨Created ${userInfo}`)
     } catch (error) {
       /* TODO fix error returns */
       return res.json(error)
