@@ -1,5 +1,3 @@
-import httpStatusCodes from 'http-status-code'
-
 export interface APIError {
   message: string
   code: number
@@ -18,7 +16,7 @@ export default class ApiError {
       ...{
         message: error.message,
         code: error.code,
-        error: error.codeAsString ? error.codeAsString : httpStatusCodes.getStatusText(error.code),
+        error: error.codeAsString,
       },
       ...(error.documentation && { documentation: error.documentation }),
       ...(error.description && { description: error.description }),
