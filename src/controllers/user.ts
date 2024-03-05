@@ -1,5 +1,5 @@
 import { Response, Request } from 'express'
-import { firebaseApp } from '../lib/firebase'
+import { firebaseApp } from '../util/firebase'
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -7,10 +7,14 @@ import {
   sendEmailVerification,
 } from 'firebase/auth'
 import { UserRepository } from '../repositories/user'
+import { BaseController } from './base'
 
 const userRepository = new UserRepository()
 
-export class UserController {
+export class UserController extends BaseController {
+  constructor() {
+    super()
+  }
   public async createUser(req: Request, res: Response) {
     const auth = getAuth(firebaseApp)
     const { username, email, password } = req.body
@@ -20,18 +24,18 @@ export class UserController {
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+
       const { user } = userCredential
       const { uid } = user
 
       const userData = { username, uid }
-      userRepository.saveUserInfo(userData)
+      const userInfo = await userRepository.saveUserInfo(userData)
 
       sendEmailVerification(user)
 
-      return res.status(204).json('✨Created')
+      this.sendCreateUpdateSuccessResponse(userInfo, 200, res)
     } catch (error) {
-      /* TODO fix error returns */
-      return res.json(error)
+      this.sendCreateUpdateErrorResponse(res, error)
     }
   }
 
@@ -41,9 +45,12 @@ export class UserController {
     const { userId } = req.params
     try {
       const userProfile = await userRepository.getUserProfile(userId)
-      res.json(userProfile)
+      return res.status(204).send(userProfile)
     } catch (error) {
-      res.json(error)
+      this.sendErrorResponse(res, {
+        code: 500,
+        message: 'Something went wrong',
+      })
     }
   }
 
