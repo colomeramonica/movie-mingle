@@ -48,13 +48,13 @@ A copy of *Letterboxd* where the user can create an account and rate films and s
 [todo-badge]: https://img.shields.io/badge/TO%20DO-blue?style=flat-square
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/colomeramonica
-[React.js]: https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB
+[React.js]: https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB&style=flat-square
 [React-url]: https://reactjs.org/
-[NodeJS]: https://img.shields.io/badge/NodeJS-0769AD?logo=node.js&logoColor=white
+[NodeJS]: https://img.shields.io/badge/NodeJS-0769AD?logo=node.js&logoColor=white&style=flat-square
 [Node-url]: https://nodejs.org/en 
-[MySQLite]: https://shields.io/badge/MySQL-lightgrey?logo=mysql&logoColor=white&labelColor=blue
+[MySQLite]: https://shields.io/badge/MySQL-lightgrey?logo=mysql&logoColor=white&labelColor=blue&style=flat-square
 [MySQLite-url]: https://www.mysql.com/
-[Firebase]:https://img.shields.io/badge/firebase-ffca28?logo=firebase&logoColor=black
+[Firebase]:https://img.shields.io/badge/firebase-ffca28?logo=firebase&logoColor=black&style=flat-square
 [Firebase-url]: https://firebase.google.com/?hl=pt
 [Typescript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
 [Typescript-url]: https://www.typescriptlang.org/
