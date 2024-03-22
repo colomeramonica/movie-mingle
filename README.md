@@ -1,205 +1,60 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+## Movie Mingle [![wip-badge][wip-badge]][wip-badge]
 
+### 🎬 Ideia do projeto
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+A copy of *Letterboxd* where the user can create an account and rate films and series
 
-  <h3 align="center">Movie Mingle</h3>
+### Stack de desenvolvimento
 
-  <p align="center">
-    Study project that allows users to rate films and series 
-    <br />
-    <br />
-    <br />
-  </p>
-</div>
+- NodeJS + Typescript [BackEnd]
+- React [FrontEnd]
+- SQLite [DataBase]
+- Firebase [Auth]
 
+### ⚡ Functionalities [![todo-badge][todo-badge]][todo-badge]
 
+- [ ]  🧾 Create account
+- [ ]  🎟️ Login
+- [ ]  📩 Recover password
+- [ ]  🔎 Filter for movies and shows
+    - Name
+    - Cast
+    - Genre
+    - Release year
+- [ ]  ⭐ Rating of movies and shows
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+### 🛠 Built with
 
+[![React][React.js]][React-url]
+[![NodeJS][NodeJS]][Node-url]
+[![MySQLite][MySQLite]][MySQLite-url]
+[![Firebase][Firebase]][Firebase-url]
+[![Typescript][Typescript]][Typescript-url]
 
+### 📂 Acknowledgment
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+📎 [Prisma Docs](https://www.prisma.io/docs/orm/prisma-schema/data-model/models)
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+📎 [Node.JS Roadmap](https://roadmap.sh/nodejs)
 
-<i>Movie Mingle</i> believes the experience of watching movies and shows is even better when shared. For that reason, we offer you the possibility of rating titles to help you and your friends discover your new obsessions. 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [![React][React.js]][React-url]
-* [![NodeJS][NodeJS]][Node-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-### Prerequisites
-
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Add Changelog
-- [ ] Add "Sign Up" page
-- [ ] Add "Login" page
-- [ ] Add "Recover Password" page
-- [ ] Multi-language Support
-    - [ ] Portuguese (Brazil)
-    - [ ] English
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Project Link: [https://github.com/colomeramonica/movie-mingle](https://github.com/colomeramonica/movie-mingle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-<!--
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+📎 [TheMovieDB](https://developer.themoviedb.org/docs/getting-started)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[wip-badge]: https://img.shields.io/badge/work%20in%20progress-yellow?style=for-the-badge
+[todo-badge]: https://img.shields.io/badge/TO%20DO-blue?style=flat-square
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/colomeramonica
-[product-screenshot]: images/screenshot.png
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React.js]: https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[NodeJS]: https://img.shields.io/badge/NodeJS-0769AD?style=for-the-badge&logo=node.js&logoColor=white
+[NodeJS]: https://img.shields.io/badge/NodeJS-0769AD?logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/en 
+[MySQLite]: https://shields.io/badge/MySQL-lightgrey?logo=mysql&logoColor=white&labelColor=blue
+[MySQLite-url]: https://www.mysql.com/
+[Firebase]:https://img.shields.io/badge/firebase-ffca28?logo=firebase&logoColor=black
+[Firebase-url]: https://firebase.google.com/?hl=pt
+[Typescript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
+[Typescript-url]: https://www.typescriptlang.org/
