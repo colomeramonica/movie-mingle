@@ -2,11 +2,11 @@
 
 ## Movie Mingle [![wip-badge][wip-badge]][wip-badge]
 
-### 🎬 Ideia do projeto
+### 🎬 Project's idea
 
 A copy of *Letterboxd* where the user can create an account and rate films and series
 
-### Stack de desenvolvimento
+### Build with
 
 - NodeJS + Typescript [BackEnd]
 - React [FrontEnd]
