@@ -12,9 +12,6 @@ import { BaseController } from './base'
 const userRepository = new UserRepository()
 
 export class UserController extends BaseController {
-  constructor() {
-    super()
-  }
   public async createUser(req: Request, res: Response) {
     const auth = getAuth(firebaseApp)
     const { username, email, password } = req.body
@@ -23,7 +20,11 @@ export class UserController extends BaseController {
     this.handleInputData(data)
 
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      )
 
       const { user } = userCredential
       const { uid } = user
@@ -47,7 +48,7 @@ export class UserController extends BaseController {
       const userProfile = await userRepository.getUserProfile(userId)
       return res.status(204).send(userProfile)
     } catch (error) {
-      this.sendErrorResponse(res, {
+      return this.sendErrorResponse(res, {
         code: 500,
         message: 'Something went wrong',
       })
@@ -65,13 +66,17 @@ export class UserController extends BaseController {
     }
   }
 
-  private handleInputData(data: { username: string; email: string; password: string }) {
+  private handleInputData(data: {
+    username: string
+    email: string
+    password: string
+  }) {
     const { username, email, password } = data
 
     try {
       this.checkValidUsername(username)
       this.checkValidEmail(email)
-      //this.checkValidPassword(password)
+      // this.checkValidPassword(password)
     } catch (error) {
       throw new Error(`Error during input validation: ${error.message}`)
     }

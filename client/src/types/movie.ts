@@ -2,6 +2,6 @@ export interface Movie {
   id: number
   title: string
   overview: string
-  genres: Array<number>
+  genres: Array<string>
   poster: string
 }

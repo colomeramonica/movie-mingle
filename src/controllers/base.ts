@@ -1,7 +1,6 @@
 import { Response } from 'express'
 import ApiError, { APIError } from '@src/util/errors/api-error'
 import { FirebaseError } from '@firebase/util'
-import { Prisma } from '@prisma/client'
 
 export abstract class BaseController {
   protected sendCreateUpdateErrorResponse(res: Response, error: unknown): void {
@@ -14,14 +13,20 @@ export abstract class BaseController {
         }),
       )
     }
-    res.status(500).send(ApiError.format({ code: 500, message: 'Something went wrong!' }))
+    res
+      .status(500)
+      .send(ApiError.format({ code: 500, message: 'Something went wrong!' }))
   }
 
-  protected sendCreateUpdateSuccessResponse(data: object, code: number, res: Response): void {
+  protected sendCreateUpdateSuccessResponse(
+    data: object,
+    code: number,
+    res: Response,
+  ): void {
     const successResponse = {
-      code: code,
+      code,
       message: code == 200 ? 'Created' : 'Updated',
-      data: data,
+      data,
     }
 
     res.status(200).json(successResponse)

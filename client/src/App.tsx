@@ -3,14 +3,14 @@ import { dummyData } from './data/movies'
 
 function App() {
   return (
-    <main className="py-10 h-full bg-slate-50">
-      <h1 className="font-bold text-3xl text-center pb-[10px]">Popular Movies</h1>
-      <div className="max-w-lg items-center justify-center">
-        <div className="flex flex-row gap-4 justify-center items-center" >
-          {dummyData.map(movie => (
-            <MovieCard movie={movie} key={movie.id}/>
-          ))}
-        </div>
+    <main className="h-full w-full bg-slate-50 py-10">
+      <h1 className="pb-[10px] text-center text-3xl font-bold">
+        Popular Movies
+      </h1>
+      <div className=" flex flex-row items-center justify-center gap-4">
+        {dummyData.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
       </div>
     </main>
   )
